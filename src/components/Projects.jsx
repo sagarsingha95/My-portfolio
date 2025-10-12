@@ -41,7 +41,7 @@ const Projects = ({id}) => {
 
       <div className="p-4 flex flex-col md:flex-row m-auto w-[80%] items-center gap-4 project">
         <img
-          src="\src\assets\Screenshot 2025-10-11 105051.png"
+          src="/src/assets/Screenshot 2025-10-11 105051.png"
           alt="Fast React Pizza Screenshot"
           className="w-[50%]"
         />
@@ -63,7 +63,7 @@ const Projects = ({id}) => {
 
       <div className="p-4 flex flex-col md:flex-row m-auto w-[80%] items-center gap-4 project">
         <img
-          src="\src\assets\Screenshot 2025-10-11 130603.png"
+          src="/src/assets/Screenshot 2025-10-11 130603.png"
           alt="Filmy App Screenshot"
           className="w-[50%]"
         />
