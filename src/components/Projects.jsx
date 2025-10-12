@@ -1,6 +1,8 @@
 import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import pizzaScreenshot from "../assets/Screenshot 2025-10-11 105051.png";
+import filmyScreenshot from "../assets/Screenshot 2025-10-11 130603.png";
 
 const Projects = ({id}) => {
   const containerRef = useRef();
@@ -20,8 +22,8 @@ const Projects = ({id}) => {
           duration: 1.5,
           scrollTrigger: {
             trigger: el,
-            start: "top 90%",
-            end: "top 20%",
+            start: "top 100%",
+            end: "top 70%",
             scrub: true,
           },
         }
@@ -34,14 +36,14 @@ const Projects = ({id}) => {
   }, []);
 
   return (
-    <div ref={containerRef} id={id}>
+    <div ref={containerRef} id={id} className="mb-[100px]">
       <div className="text-center mb-5">
         <h1 className="text-4xl font-bold">Projects</h1>
       </div>
 
       <div className="p-4 flex flex-col md:flex-row m-auto w-[80%] items-center gap-4 project">
         <img
-          src="/src/assets/Screenshot 2025-10-11 105051.png"
+          src={pizzaScreenshot}
           alt="Fast React Pizza Screenshot"
           className="w-[50%]"
         />
@@ -63,7 +65,7 @@ const Projects = ({id}) => {
 
       <div className="p-4 flex flex-col md:flex-row m-auto w-[80%] items-center gap-4 project">
         <img
-          src="/src/assets/Screenshot 2025-10-11 130603.png"
+          src={filmyScreenshot}
           alt="Filmy App Screenshot"
           className="w-[50%]"
         />
