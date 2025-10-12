@@ -53,7 +53,7 @@ const Projects = ({id}) => {
             responsive React app for ordering pizzas online...
           </p>
           <a
-            href="https://fast-react-pizza-q2z4.vercel.app/"
+            href="https://fast-react-pizza-7gkdk8svw-sagar-singhas-projects.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-4 inline-block p-3 border-2 rounded-4xl hover:text-sky-600 hover:border-sky-600 text-center md:self-start select-auto"
