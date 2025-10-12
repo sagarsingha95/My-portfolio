@@ -23,7 +23,6 @@ const Projects = ({id}) => {
             start: "top 90%",
             end: "top 20%",
             scrub: true,
-            markers: true,
           },
         }
       );
