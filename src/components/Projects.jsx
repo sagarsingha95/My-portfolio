@@ -3,9 +3,38 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import pizzaScreenshot from "../assets/Screenshot 2025-10-11 105051.png";
 import filmyScreenshot from "../assets/Screenshot 2025-10-11 130603.png";
+import Ecommerce from '../assets/Screenshot 2025-12-15 123336.png';
+import Gym from '../assets/Screenshot 2025-12-17 092251.png';
 
 const Projects = ({id}) => {
   const containerRef = useRef();
+
+  const myProjects = [
+    {
+      name:'Fast-react-Pizza',
+      desc:' A responsive React app for ordering pizzas online...',
+      image:pizzaScreenshot,
+      link:'https://fast-react-pizza-7gkdk8svw-sagar-singhas-projects.vercel.app/'
+    },
+    {
+      name:'Filmy-App',
+      desc:' FilmyInfo is a sleek movie information site...',
+      image:filmyScreenshot,
+      link:'https://filmyinfo.netlify.app/'
+    },
+    {
+      name:'Fake-Mart',
+      desc:' A Ecommerce app built using fake store api...',
+      image:Ecommerce,
+      link:'https://fake-mart-ecommerce-jvfvj8l8o-sagar-singhas-projects.vercel.app/'
+    },
+    {
+      name:'Flex-zone-Fitness',
+      desc:' A gym membership Website...',
+      image:Gym,
+      link:'https://gym-website-w4rk.vercel.app/'
+    },
+  ]
 
   gsap.registerPlugin(ScrollTrigger);
 
@@ -40,50 +69,29 @@ const Projects = ({id}) => {
       <div className="text-center mb-5">
         <h1 className="text-4xl font-bold">Projects</h1>
       </div>
-
-      <div className="p-4 flex flex-col md:flex-row m-auto w-[80%] items-center gap-4 project">
+      {myProjects.map((project)=>(
+        <div className="p-4 flex flex-col md:flex-row m-auto w-[80%] items-center gap-4 project">
         <img
-          src={pizzaScreenshot}
-          alt="Fast React Pizza Screenshot"
+          src={project.image}
+          alt={project.name}
           className="w-[50%]"
         />
         <div className="flex flex-col">
           <p>
-            <span className="text-2xl font-bold">Fast React Pizza</span>: A
-            responsive React app for ordering pizzas online...
+            <span className="text-2xl font-bold">{project.name}</span>:{project.desc}
           </p>
           <a
-            href="https://fast-react-pizza-7gkdk8svw-sagar-singhas-projects.vercel.app/"
+            href={project.link}
             target="_blank"
             rel="noopener noreferrer"
             className="mt-4 inline-block p-3 border-2 rounded-4xl hover:text-sky-600 hover:border-sky-600 text-center md:self-start select-auto"
           >
-            Fast React Pizza
+            {project.name}
           </a>
         </div>
       </div>
-
-      <div className="p-4 flex flex-col md:flex-row m-auto w-[80%] items-center gap-4 project">
-        <img
-          src={filmyScreenshot}
-          alt="Filmy App Screenshot"
-          className="w-[50%]"
-        />
-        <div className="flex flex-col">
-          <p>
-            <span className="text-2xl font-bold">Filmy App</span>: FilmyInfo is
-            a sleek movie information site...
-          </p>
-          <a
-            href="https://filmyinfo.netlify.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-4 inline-block p-3 border-2 rounded-4xl hover:text-sky-600 hover:border-sky-600 text-center md:self-start select-auto"
-          >
-            Filmy App
-          </a>
-        </div>
-      </div>
+      ))}
+      
     </div>
   );
 };
